@@ -1,6 +1,6 @@
 # vaik-classification-tflite-exporter
 
-Export from classfication pb model to tflite model
+Export from classification pb model to tflite model
 
 ## Usage
 
