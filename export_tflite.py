@@ -2,7 +2,7 @@ import glob
 import os
 import argparse
 import random
-
+from tqdm import tqdm
 import tensorflow as tf
 
 
@@ -25,7 +25,7 @@ def tf2tflite(input_model_dir_path, output_model_file_path, representative_datas
 
 def main(input_model_dir_path, train_input_dir_path, output_model_file_path, sample_max_num):
     def representative_dataset_gen():
-        for step_index, image_path in enumerate(image_path_list):
+        for step_index, image_path in tqdm(enumerate(image_path_list), desc=f'sample_max_num:{sample_max_num}'):
             if step_index > sample_max_num:
                 break
             yield [
