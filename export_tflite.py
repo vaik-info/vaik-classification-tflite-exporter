@@ -57,4 +57,4 @@ if __name__ == '__main__':
     args.train_input_dir_path = os.path.expanduser(args.train_input_dir_path)
     args.output_model_file_path = os.path.expanduser(args.output_model_file_path)
 
-    main(args.input_model_dir_path, args.train_input_dir_path, args.output_model_file_path)
+    main(args.input_model_dir_path, args.train_input_dir_path, args.output_model_file_path, args.sample_max_num)
